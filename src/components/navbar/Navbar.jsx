@@ -2,6 +2,8 @@ import React from 'react'
 import styles from "./navbar.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
+import AuthLinks from '../authLinks/AuthLinks'
+import ThemeToggle from '../themeToggle/ThemeToggle'
 const Navbar = () => {
     return (
         <div className={styles.container}>
@@ -11,12 +13,13 @@ const Navbar = () => {
                 <Image src="/tiktok.png" alt="tiktok" width={24} height={24} />
                 <Image src="/youtube.png" alt="youtube" width={24} height={24} />
             </div>
-            <div className={styles.logo}>mindsoulsymphonyy</div>
+            <div className={styles.logo}>meow</div>
             <div className={styles.links}>
+                <ThemeToggle />
                 <Link href="/">Home</Link>
                 <Link href="/">About</Link>
-                <Link href="/">Blogs</Link>
                 <Link href="/">Contact</Link>
+                <AuthLinks />
             </div>
         </div>
     )
